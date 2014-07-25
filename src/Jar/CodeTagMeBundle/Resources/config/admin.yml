@@ -1,0 +1,33 @@
+services:
+    sonata.admin.album:
+        class: Jar\CodeTagMeBundle\Admin\AlbumAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Album" }
+        arguments:
+            - ~
+            - Jar\CodeTagMeBundle\Entity\Album
+            - ~
+        calls:
+            - [ setTranslationDomain, [JarCodeTagMeBundle]]
+                
+    sonata.admin.section:
+        class: Jar\CodeTagMeBundle\Admin\SectionAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Section" }
+        arguments:
+            - ~
+            - Jar\CodeTagMeBundle\Entity\Section
+            - ~
+        calls:
+            - [ setTranslationDomain, [JarCodeTagMeBundle]]
+                
+    sonata.admin.item:
+        class: Jar\CodeTagMeBundle\Admin\ItemAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Item" }
+        arguments:
+            - ~
+            - Jar\CodeTagMeBundle\Entity\Item
+            - ~
+        calls:
+            - [ setTranslationDomain, [JarCodeTagMeBundle]]
