@@ -21,6 +21,11 @@ class AlbumAdmin extends Admin
             ->add('name')
             ->add('description')
             ->add('year')
+//            ->add('sections', 'sonata_type_collection', array(), array(
+//                'edit' => 'inline',
+//                'inline' => 'table',
+//                'sortable'  => 'position'
+//            ))
         ;
     }
 
@@ -28,10 +33,9 @@ class AlbumAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('personJuridic')
             ->add('name')
-            ->add('type')
-            ->add('floors')
+            ->add('description')
+            ->add('year')
         ;
     }
 

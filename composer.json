@@ -27,6 +27,8 @@
         "sonata-project/admin-bundle": "dev-master",
         "sonata-project/doctrine-orm-admin-bundle": "dev-master",
 
+        "pixassociates/sortable-behavior-bundle": "dev-master",
+
         "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {

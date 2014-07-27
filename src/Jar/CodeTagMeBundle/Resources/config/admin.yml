@@ -17,17 +17,7 @@ services:
         arguments:
             - ~
             - Jar\CodeTagMeBundle\Entity\Section
-            - ~
+            - 'PixSortableBehaviorBundle:SortableAdmin' # define the new controller via the third argument
         calls:
             - [ setTranslationDomain, [JarCodeTagMeBundle]]
-                
-    sonata.admin.item:
-        class: Jar\CodeTagMeBundle\Admin\ItemAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Item" }
-        arguments:
-            - ~
-            - Jar\CodeTagMeBundle\Entity\Item
-            - ~
-        calls:
-            - [ setTranslationDomain, [JarCodeTagMeBundle]]
+            - [ setPositionService, [@pix_sortable_behavior.position]]

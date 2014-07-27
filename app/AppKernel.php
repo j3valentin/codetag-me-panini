@@ -27,6 +27,8 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
+
+            new Pix\SortableBehaviorBundle\PixSortableBehaviorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
